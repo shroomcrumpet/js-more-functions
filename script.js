@@ -10,13 +10,23 @@
 // Hint: The % operator gives the remainder when one number is divided by another, e.g. 10 % 7 gives 3.
 // Note: This used to be a common interview question.
 
+function fizzbuzz() {
 
+    for (var i = 1; i < 101; i++) {
 
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
 
-
-
-
-
+fizzbuzz();
 
 
 // Exercise 2: Prime Counting
