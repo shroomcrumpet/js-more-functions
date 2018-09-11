@@ -34,13 +34,17 @@ fizzbuzz();
 // Write a function that takes a number and returns true if the number is prime, and false otherwise.
 // Hint: A number is prime when it is only divisble by 1 and itself.
 
+function primeCounting(num) {
 
+    if (num === 1) return false;
+    if (num === 2) return true;
 
-
-
-
-
-
+    for (i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        } else return true;
+    }
+}
 
 
 // Exercise 3: Letter Counting
@@ -52,13 +56,23 @@ fizzbuzz();
 // e - 1
 // Hint: Somewhere, you will need to examine each letter in the string, and increase the value of a counter depending on the letter you're currently examining. An object with keys corresponding to the letters of the string would be useful.
 
+function charCounter(input) {
+    var output = {};
+    split = input.split("");
 
+    for (i in split) {
 
+        if (output[split[i]]) {
+            output[split[i]]++;
+        }
+        else {
+        output[split[i]] = 1;
+        }
+    }
+    return output;
+}
 
-
-
-
-
+console.log(charCounter("Wasabi wA p.. ,"));
 
 
 // Exercise 4: Debugging
